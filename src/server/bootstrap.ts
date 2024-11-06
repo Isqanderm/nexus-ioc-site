@@ -1,6 +1,6 @@
 import { NexusApplicationsServer } from '@nexus-ioc/core/dist/server';
 import { NexusApplicationInterface } from '@nexus-ioc/core';
-import { AppModule } from '@apps/app.module';
+import { AppModule } from '@apps/server/app.module';
 import { ConfigService } from '@apps/config/config.service';
 import { server } from './controllers';
 

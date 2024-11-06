@@ -5,7 +5,10 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { App } from '../components/App';
 import { StaticRouter } from 'react-router-dom/server';
+import { NexusProvider } from 'nexus-ioc-react-adapter';
 import fs from 'fs';
+import { TranslateService } from '@apps/translate/translate.service';
+import { LanguageProvider } from 'src/context/LanguageContext';
 
 export const server = fastify({
   logger: true,
@@ -61,24 +64,28 @@ const getAssets = () => {
     const manifestPath = path.join(__dirname, '..', 'public', 'manifest.json');
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
     return {
-      css: manifest['main.css'] || 'styles.css',
+      css: manifest['main.css'],
       js: manifest['main.js'] || 'bootstrap.js',
     };
   } catch (error) {
-    console.error('Error reading manifest:', error);
-    return {
-      css: 'styles.css',
-      js: 'bootstrap.js',
-    };
+    throw new Error('Error reading manifest:');
   }
 };
 
 server.get('*', async (request, reply) => {
   const assets = getAssets();
+  const language = request.headers['accept-language']?.split(',')[0] || 'en';
+  const translateService = await server.container.get<TranslateService>(TranslateService);
 
   const reactHtml = renderToString(
     <StaticRouter location={request.url}>
-      <App />
+      <LanguageProvider initialLanguage={language}>
+        <NexusProvider
+          container={server.container as any}
+      >
+          <App />
+        </NexusProvider>
+      </LanguageProvider>
     </StaticRouter>
   );
 
@@ -90,11 +97,10 @@ server.get('*', async (request, reply) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="${assets.css}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <script>
           window.__INITIAL_PATH__ = '${request.url}';
+          window.__INITIAL_LANGUAGE__ = '${language}';
+          window.__INIT_TRANSLATIONS__ = ${JSON.stringify({ [language]: translateService?.getTranslation(language) })};
         </script>
       </head>
       <body>

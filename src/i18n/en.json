@@ -1,0 +1,25 @@
+{
+  "header.docs": "Documentation",
+  "header.support": "Support",
+  "header.github": "GitHub",
+  
+  "hero.title": "Progressive IoC container for TypeScript",
+  "hero.subtitle": "Build scalable applications using modern development patterns",
+  "hero.getStarted": "Get Started",
+  "hero.documentation": "Documentation",
+  
+  "features.title": "Features",
+  "features.modular.title": "Modular Architecture",
+  "features.modular.description": "Easily create and manage modules",
+  "features.di.title": "Dependency Injection",
+  "features.di.description": "Use decorators for dependency injection",
+
+  "router.introduction": "Introduction",
+  "router.introduction.first-steps": "First Steps",
+  "router.introduction.installation": "Installation",
+
+  "router.fundamentals": "Fundamentals",
+  "router.fundamentals.modules": "Modules",
+  "router.fundamentals.dependency-injection": "Dependency Injection",
+  "router.fundamentals.lifecycle": "Lifecycle"
+}

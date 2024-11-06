@@ -1,0 +1,25 @@
+{
+  "header.docs": "Документация",
+  "header.support": "Поддержка",
+  "header.github": "GitHub",
+  
+  "hero.title": "Прогрессивный IoC контейнер для TypeScript",
+  "hero.subtitle": "Создавайте масштабируемые приложения с использованием современных паттернов разработки",
+  "hero.getStarted": "Начать работу",
+  "hero.documentation": "Документация",
+  
+  "features.title": "Возможности",
+  "features.modular.title": "Модульная архитектура",
+  "features.modular.description": "Легко создавайте и управляйте модулями",
+  "features.di.title": "Внедрение зависимостей",
+  "features.di.description": "Используйте декораторы для внедрения зависимостей",
+
+  "router.introduction": "Введение",
+  "router.introduction.first-steps": "Первые шаги",
+  "router.introduction.installation": "Установка",
+
+  "router.fundamentals": "Основы",
+  "router.fundamentals.modules": "Модули",
+  "router.fundamentals.dependency-injection": "Внедрение зависимостей",
+  "router.fundamentals.lifecycle": "Жизненный цикл"
+}

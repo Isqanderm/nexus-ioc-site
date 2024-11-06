@@ -66,6 +66,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "lint-staged": {
-    "./src/*.{js,jsx,ts,tsx}": ["npx @biomejs/biome lint . --write"]
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx @biomejs/biome lint . --write"
+    ]
   }
 }

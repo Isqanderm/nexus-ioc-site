@@ -13,13 +13,16 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@apps/*": ["src/apps/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@hooks/*": ["src/hooks/*"]
     },
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "types": ["./src/css.d.ts"]
+    "types": ["./src/css.d.ts", "./src/global.d.ts"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

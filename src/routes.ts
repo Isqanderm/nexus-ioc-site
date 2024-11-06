@@ -1,27 +1,19 @@
 export const routes = [
   {
-    title: 'Введение',
+    title: 'router.introduction',
     path: '/introduction',
     children: [
-      { title: 'Первые шаги', path: '/introduction/first-steps' },
-      { title: 'Установка', path: '/introduction/installation' },
+      { title: 'router.introduction.first-steps', path: '/introduction/first-steps' },
+      { title: 'router.introduction.installation', path: '/introduction/installation' },
     ],
   },
   {
-    title: 'Основы',
+    title: 'router.fundamentals',
     path: '/fundamentals',
     children: [
-      { title: 'Модули', path: '/fundamentals/modules' },
-      { title: 'Внедрение зависимостей', path: '/fundamentals/dependency-injection' },
-      { title: 'Жизненный цикл', path: '/fundamentals/lifecycle' },
+      { title: 'router.fundamentals.modules', path: '/fundamentals/modules' },
+      { title: 'router.fundamentals.dependency-injection', path: '/fundamentals/dependency-injection' },
+      { title: 'router.fundamentals.lifecycle', path: '/fundamentals/lifecycle' },
     ],
-  },
-  {
-    title: 'Продвинутое',
-    path: '/advanced',
-    children: [
-      { title: 'Асинхронные модули', path: '/advanced/async-modules' },
-      { title: 'Circular dependencies', path: '/advanced/circular-deps' },
-    ],
-  },
+  }
 ];

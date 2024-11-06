@@ -26,6 +26,7 @@ const commonConfig = {
       '@components': path.resolve(__dirname, 'src/components'),
       '@apps': path.resolve(__dirname, 'src/apps'),
       '@styles': path.resolve(__dirname, 'src/styles'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
     },
   },
 };
@@ -73,6 +74,11 @@ const serverConfig = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.IS_SERVER': JSON.stringify(true)
+    })
+  ],
 };
 
 const clientConfig = {
@@ -88,6 +94,9 @@ const clientConfig = {
     publicPath: '/public/',
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.IS_SERVER': JSON.stringify(false)
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles.[contenthash].css',
