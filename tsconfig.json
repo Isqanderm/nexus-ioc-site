@@ -12,18 +12,15 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@apps/*": ["src/apps/*"]
+      "@apps/*": ["src/apps/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["./src/css.d.ts"]
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
-} 
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

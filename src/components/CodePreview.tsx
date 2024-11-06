@@ -33,4 +33,4 @@ export class UserService {
       </div>
     </section>
   );
-}; 
+};

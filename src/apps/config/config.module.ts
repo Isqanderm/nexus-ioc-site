@@ -1,5 +1,5 @@
-import { NsModule } from "@nexus-ioc/core";
-import { ConfigService } from "./config.service";
+import { NsModule } from '@nexus-ioc/core';
+import { ConfigService } from './config.service';
 
 @NsModule({
   imports: [],

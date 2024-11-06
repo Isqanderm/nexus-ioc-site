@@ -3,6 +3,9 @@
   "organizeImports": {
     "enabled": true
   },
+  "files": {
+    "include": ["src/**/*.{ts,tsx,js,jsx}"]
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -30,8 +33,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingComma": "es5",
       "semicolons": "always"
     }
   }
-} 
+}
