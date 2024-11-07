@@ -65,7 +65,7 @@ const getAssets = () => {
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
     return {
       css: manifest['main.css'],
-      js: manifest['main.js'] || 'bootstrap.js',
+      js: manifest['main.js'],
     };
   } catch (error) {
     throw new Error('Error reading manifest:');

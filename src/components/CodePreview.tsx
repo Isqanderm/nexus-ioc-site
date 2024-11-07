@@ -1,33 +1,26 @@
 import React from 'react';
 
-export const CodePreview: React.FC = () => {
-  const code = `
-@Injectable()
-export class UserService {
-  constructor(
-    @Inject('DATABASE')
-    private readonly db: Database,
-    private readonly logger: LoggerService
-  ) {}
+type Language = string;
+interface CodePreviewProps {
+  children: string;
+  language?: Language;
+  showLineNumbers?: boolean;
+  title?: string;
+}
 
-  async getUsers(): Promise<User[]> {
-    this.logger.log('Fetching users...');
-    return this.db.users.findAll();
-  }
-}`;
-
+export const CodePreview: React.FC<CodePreviewProps> = (props) => {
   return (
     <section className="code-preview">
       <div className="container">
         <div className="code-wrapper">
           <div className="code-header">
-            <span className="file-name">user.service.ts</span>
+            <span className="file-name">{props.title}</span>
             <div className="actions">
               <button className="copy-button">Copy</button>
             </div>
           </div>
           <pre className="code-block">
-            <code>{code}</code>
+            <code>{props.children}</code>
           </pre>
         </div>
       </div>

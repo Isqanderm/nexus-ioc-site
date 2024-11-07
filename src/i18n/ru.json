@@ -20,6 +20,63 @@
 
   "router.fundamentals": "Основы",
   "router.fundamentals.modules": "Модули",
-  "router.fundamentals.dependency-injection": "Внедрение зависимостей",
-  "router.fundamentals.lifecycle": "Жизненный цикл"
+  "router.fundamentals.providers": "Провайдеры",
+  "router.fundamentals.custom-providers": "Пользовательские провайдеры",
+  "router.fundamentals.asynchronous-providers": "Асинхронные провайдеры",
+  "router.fundamentals.dynamic-modules": "Динамические модули",
+  "router.fundamentals.injection-scopes": "Область видимости внедрения",
+  "router.fundamentals.circular-dependency": "Циклическая зависимость",
+  "router.fundamentals.testing": "Тестирование",
+
+  "pages.introduction.title": "Введение в Nexus IoC",
+  "pages.introduction.description": "Nexus IoC - это современный IoC контейнер для TypeScript, который помогает создавать масштабируемые и поддерживаемые приложения.",
+  "pages.introduction.what-is.title": "Что такое Nexus IoC?",
+  "pages.introduction.what-is.description": "Nexus IoC - это фреймворк для внедрения зависимостей, который использует декораторы TypeScript для создания и управления зависимостями в вашем приложении.",
+
+  "pages.custom-providers.title": "Пользовательские провайдеры",
+  "pages.custom-providers.description": "Nexus IoC предоставляет несколько способов определения провайдеров для более гибкого управления зависимостями.",
+  "pages.custom-providers.value-providers.title": "Провайдеры значений",
+  "pages.custom-providers.value-providers.description": "Позволяют внедрять константы или предварительно подготовленные объекты.",
+  "pages.custom-providers.class-providers.title": "Провайдеры классов",
+  "pages.custom-providers.class-providers.description": "Позволяют указать класс, который должен использоваться для создания экземпляра провайдера.",
+  "pages.custom-providers.factory-providers.title": "Фабричные провайдеры",
+  "pages.custom-providers.factory-providers.description": "Позволяют использовать фабричную функцию для создания значения провайдера.",
+
+  "pages.async-providers.title": "Асинхронные провайдеры",
+  "pages.async-providers.description": "Nexus IoC поддерживает асинхронную инициализацию провайдеров, что особенно полезно при работе с базами данных и внешними API.",
+  "pages.async-providers.async-factory.title": "Асинхронные фабрики",
+  "pages.async-providers.async-factory.description": "Используйте async/await в фабричных провайдерах для асинхронной инициализации.",
+
+  "pages.dynamic-modules.title": "Динамические модули",
+  "pages.dynamic-modules.description": "Динамические модули позволяют настраивать модули во время выполнения программы.",
+  "pages.dynamic-modules.configuration.title": "Конфигурация",
+  "pages.dynamic-modules.configuration.description": "Создание настраиваемых модулей с помощью статических методов.",
+  "pages.dynamic-modules.usage.title": "Использование",
+  "pages.dynamic-modules.usage.description": "Пример использования динамического модуля в приложении.",
+
+  "pages.injection-scopes.title": "Области видимости внедрения",
+  "pages.injection-scopes.description": "Nexus IoC поддерживает три области видимости для провайдеров: Singleton, Request и Transient.",
+  "pages.injection-scopes.singleton.title": "Singleton область",
+  "pages.injection-scopes.singleton.description": "Один экземпляр на всё приложение.",
+  "pages.injection-scopes.request.title": "Request область",
+  "pages.injection-scopes.request.description": "Новый экземпляр для каждого запроса.",
+  "pages.injection-scopes.transient.title": "Transient область",
+  "pages.injection-scopes.transient.description": "Новый экземпляр при каждом внедрении.",
+
+  "pages.circular-dependency.title": "Циклические зависимости",
+  "pages.circular-dependency.description": "Nexus IoC предоставляет механизмы для работы с циклическими зависимостями.",
+  "pages.circular-dependency.forward-ref.title": "Forward Reference",
+  "pages.circular-dependency.forward-ref.description": "Использование forwardRef для разрешения циклических зависимостей.",
+  "pages.circular-dependency.module-ref.title": "Module Reference",
+  "pages.circular-dependency.module-ref.description": "Использование ModuleRef для отложенного получения зависимостей.",
+
+  "pages.testing.title": "Тестирование",
+  "pages.testing.description": "Nexus IoC предоставляет набор утилит для модульного и интеграционного тестирования.",
+  "pages.testing.unit-testing.title": "Модульное тестирование",
+  "pages.testing.unit-testing.description": "Тестирование отдельных компонентов с помощью моков.",
+  "pages.testing.e2e-testing.title": "E2E тестирование",
+  "pages.testing.e2e-testing.description": "Тестирование всего приложения от начала до конца.",
+
+  "codeBlock.copy": "Копировать",
+  "codeBlock.copied": "Скопировано!"
 }

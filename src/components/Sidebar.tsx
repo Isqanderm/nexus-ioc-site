@@ -10,9 +10,9 @@ export const Sidebar: React.FC = () => {
     <aside className="sidebar">
       <nav className="sidebar-nav">
         {routes.map((section) => (
-          <div key={section.path} className="nav-section">
+          <div key={section.title} className="nav-section">
             <h3 className="section-title">
-              <NavLink to={section.path}>{i18nTranslate(section.title)}</NavLink>
+              {i18nTranslate(section.title)}
             </h3>
             <ul className="nav-items">
               {section.children.map((item) => (

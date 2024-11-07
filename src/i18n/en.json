@@ -20,6 +20,58 @@
 
   "router.fundamentals": "Fundamentals",
   "router.fundamentals.modules": "Modules",
-  "router.fundamentals.dependency-injection": "Dependency Injection",
-  "router.fundamentals.lifecycle": "Lifecycle"
+  "router.fundamentals.providers": "Providers",
+  "router.fundamentals.custom-providers": "Custom Providers",
+  "router.fundamentals.asynchronous-providers": "Asynchronous Providers",
+  "router.fundamentals.dynamic-modules": "Dynamic Modules",
+  "router.fundamentals.injection-scopes": "Injection Scopes",
+  "router.fundamentals.circular-dependency": "Circular Dependency",
+  "router.fundamentals.testing": "Testing",
+
+  "pages.custom-providers.title": "Custom Providers",
+  "pages.custom-providers.description": "Nexus IoC offers several ways to define providers for more flexible dependency management.",
+  "pages.custom-providers.value-providers.title": "Value Providers",
+  "pages.custom-providers.value-providers.description": "Allow injecting constants or pre-prepared objects.",
+  "pages.custom-providers.class-providers.title": "Class Providers",
+  "pages.custom-providers.class-providers.description": "Allow specifying which class should be used to create the provider instance.",
+  "pages.custom-providers.factory-providers.title": "Factory Providers",
+  "pages.custom-providers.factory-providers.description": "Allow using a factory function to create the provider value.",
+
+  "pages.async-providers.title": "Asynchronous Providers",
+  "pages.async-providers.description": "Nexus IoC supports asynchronous provider initialization, which is especially useful when working with databases and external APIs.",
+  "pages.async-providers.async-factory.title": "Async Factories",
+  "pages.async-providers.async-factory.description": "Use async/await in factory providers for asynchronous initialization.",
+
+  "pages.dynamic-modules.title": "Dynamic Modules",
+  "pages.dynamic-modules.description": "Dynamic modules allow configuring modules at runtime.",
+  "pages.dynamic-modules.configuration.title": "Configuration",
+  "pages.dynamic-modules.configuration.description": "Creating configurable modules using static methods.",
+  "pages.dynamic-modules.usage.title": "Usage",
+  "pages.dynamic-modules.usage.description": "Example of using a dynamic module in an application.",
+
+  "pages.injection-scopes.title": "Injection Scopes",
+  "pages.injection-scopes.description": "Nexus IoC supports three scopes for providers: Singleton, Request, and Transient.",
+  "pages.injection-scopes.singleton.title": "Singleton Scope",
+  "pages.injection-scopes.singleton.description": "Single instance across the entire application.",
+  "pages.injection-scopes.request.title": "Request Scope",
+  "pages.injection-scopes.request.description": "New instance for each request.",
+  "pages.injection-scopes.transient.title": "Transient Scope",
+  "pages.injection-scopes.transient.description": "New instance each time injected.",
+
+  "pages.circular-dependency.title": "Circular Dependencies",
+  "pages.circular-dependency.description": "Nexus IoC provides mechanisms for working with circular dependencies.",
+  "pages.circular-dependency.forward-ref.title": "Forward Reference",
+  "pages.circular-dependency.forward-ref.description": "Using forwardRef to resolve circular dependencies.",
+  "pages.circular-dependency.module-ref.title": "Module Reference",
+  "pages.circular-dependency.module-ref.description": "Using ModuleRef for lazy dependency retrieval.",
+
+  "pages.testing.title": "Testing",
+  "pages.testing.description": "Nexus IoC provides a set of utilities for unit and integration testing.",
+  "pages.testing.unit-testing.title": "Unit Testing",
+  "pages.testing.unit-testing.description": "Testing individual components using mocks.",
+  "pages.testing.e2e-testing.title": "E2E Testing",
+  "pages.testing.e2e-testing.description": "Testing the entire application end-to-end.",
+
+  "codeBlock.copy": "Copy",
+  "codeBlock.copied": "Copied!"
 }
